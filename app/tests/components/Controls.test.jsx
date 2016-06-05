@@ -5,7 +5,6 @@ var expect = require('expect'),
 	$ = require('jQuery');
 
 var Controls = require('Controls');
-
 describe('Controls', () => {
 	it('should exist', () => {
 		expect(Controls).toExist();
@@ -16,7 +15,6 @@ describe('Controls', () => {
 			var controls = TestUtils.renderIntoDocument(<Controls status="started"/>);
 			var $el = $(ReactDOM.findDOMNode(controls));
 			var $pauseButton = $el.find('button:contains(Pause)');
-
 			expect($pauseButton.length).toBe(1);
 		});
 	});	
@@ -29,5 +27,4 @@ describe('Controls', () => {
 			expect($pauseButton.length).toBe(1);
 		});
 	});
-
 });
